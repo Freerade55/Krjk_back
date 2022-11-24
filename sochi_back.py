@@ -291,6 +291,7 @@ def getTasks():
         INNER JOIN users
         ON tasks.id = users.id
         WHERE tasks.date = '{date}'
+        ORDER BY tasks.task_id
         ;""")
     rows = cursor.fetchall()
     for i in rows:
